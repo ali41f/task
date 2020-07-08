@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MainBanner from '../components/mainBanner'
 import OurPromise from '../components/ourPromise'
 import VideoBanner from '../components/videoBanner'

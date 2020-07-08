@@ -1,4 +1,4 @@
-import React, { useState, useEffect, isValidElement } from 'react'
+import React, { useState } from 'react'
 import Dialog from '@material-ui/core/Dialog';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
@@ -80,7 +80,7 @@ const Login = ({ open, handleClose }) => {
             fetch("https://recruitment.dev.radity.com/api/login", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.userId != undefined) {
+                    if (result.userId !== undefined) {
                         setHelperText("Logged in successfully")
                     } else {
                         setHelperText(result.message)
