@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --normalBlack:  #02133C;
+  --fullBlack:  #000;
+  --lightBlack: #4B4B4B;
+  --red: #C40B0B;
+  --darkRed: #a90a0a;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --speed: 300ms; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;*/
+    font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+.contentWrapper{
+  overflow-x: hidden;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown svg.downArrowSvg{
+  position: relative;
+  margin-left: 2px;
+  top: 1px;
+}
+.navLink{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  display: inline-flex;
+  margin-right: 29px;
+  padding-right: 4px;
+  padding-left: 4px;
+  align-items: center;
+  letter-spacing: 0.15px;
+  height: 40px;
+  margin-top:24px;
+  color: var(--normalBlack);
+}
+.navLink span{
+  transition: var(--speed);
+}
+.navLink span:hover{
+  color: var(--red);
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #F4F4F4;
+  width: 224px;
+  z-index: 1;
+  top: 45px;
+  left: calc(50% - 112px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.dropdown:hover .dropdown-content {
+  display: inline-block
+}
+div.upArrowContainer{
+  position: absolute;
+}
+.dropdown svg.upArrowSvg{
+  position: absolute;
+  top: -9px;
+}
+.dropdown-content p{
+  padding: 15px;
+  border-bottom: 1px solid #F4F4F4;
+  margin: 0;
+  transition: var(--speed);
+}
+.dropdown-content p:hover{
+  color: var(--red);
+  cursor: pointer;
+}
+
+.filledButton, .outlinedButton{
+  font-weight: bold;
+font-size: 12px;
+line-height: 24px;
+width: 96px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+text-transform: uppercase;
+padding: 10px 0;
+display: inline-block;
+cursor: pointer;
+transition: var(--speed);
+}
+.filledButton{
+  margin-right:6px;
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  color: white;
+}
+.outlinedButton{
+  border: 1px solid #262626;
+  box-sizing: border-box;
+}
+.filledButton:hover{
+  background-color: var(--darkRed);
+}
+.outlinedButton:hover{
+  border: 1px solid var(--red);
+  color: var(--red)
 }
